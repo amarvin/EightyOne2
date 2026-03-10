@@ -16,17 +16,17 @@ namespace EightyOne2.Patches
     internal static class NetManagerPatches
     {
         /// <summary>
-        /// Game tile nodes count array size (41 * 25 = 1025).
+        /// Game tile nodes count array size (42 * 25 = 1025).
         /// </summary>
         internal const int OriginalTileNodesCount = AreaIndexMax * GameAreaManagerPatches.GameGridArea;
 
         /// <summary>
-        /// Expanded tile nodes count array size (41 * 81  = 3321).
+        /// Expanded tile nodes count array size (42 * 81  = 3321).
         /// </summary>
         internal const int ExpandedTileNodesCount = AreaIndexMax * GameAreaManagerPatches.ExpandedMaxAreaCount;
 
         // Area indexing max.
-        private const int AreaIndexMax = 41;
+        private const int AreaIndexMax = 42;
 
         /// <summary>
         /// Harmony transpiler for NetManager.Awake to replace hardcoded game constants.
