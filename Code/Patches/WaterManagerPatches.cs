@@ -246,7 +246,7 @@ namespace EightyOne2.Patches
         private static IEnumerable<CodeInstruction> UpdateGridTranspiler(IEnumerable<CodeInstruction> instructions) => ReplaceWaterConstants(instructions);
 
         /// <summary>
-        /// Pre-emptive Harmony prefix for WaterManager.UpdateGrid to implement 81 tiles functionality.
+        /// Preemptive Harmony prefix for WaterManager.UpdateGrid to implement 81 tiles functionality.
         /// </summary>
         /// <param name="__instance">WaterManager instance.</param>
         /// <param name="minX">Minimum X-coordinate of updated area.</param>

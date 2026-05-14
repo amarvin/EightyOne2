@@ -25,7 +25,7 @@ namespace EightyOne2
     public sealed class Patcher : PatcherBase
     {
         /// <summary>
-        /// Peforms any additional actions (such as custom patching) after PatchAll is called.
+        /// Performs any additional actions (such as custom patching) after PatchAll is called.
         /// Used here to perform post-Awake corrections for any managers instantiated before patching.
         /// </summary>
         /// <param name="harmonyInstance">Harmony instance for patching.</param>
@@ -158,7 +158,7 @@ namespace EightyOne2
                     };
                     Shader.SetGlobalVector("_ElectricityMapping", mapping);
 
-                    // Set intitial modified coordinates.
+                    // Set initial modified coordinates.
                     AccessTools.Field(typeof(ElectricityManager), "m_modifiedX2").SetValue(electricityManager, ExpandedElectricityGridMax);
                     AccessTools.Field(typeof(ElectricityManager), "m_modifiedZ2").SetValue(electricityManager, ExpandedElectricityGridMax);
                 }
@@ -203,7 +203,7 @@ namespace EightyOne2
                     };
                     Shader.SetGlobalVector("_WaterMapping", mapping);
 
-                    // Set intitial modified coordinates.
+                    // Set initial modified coordinates.
                     AccessTools.Field(typeof(WaterManager), "m_modifiedX2").SetValue(waterManager, ExpandedWaterGridMax);
                     AccessTools.Field(typeof(WaterManager), "m_modifiedZ2").SetValue(waterManager, ExpandedWaterGridMax);
                 }

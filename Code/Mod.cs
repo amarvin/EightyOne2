@@ -26,7 +26,7 @@ namespace EightyOne2
         public override string BaseName => "81 tiles 2";
 
         /// <summary>
-        /// Gets the mod's unique Harmony identfier.
+        /// Gets the mod's unique Harmony identifier.
         /// </summary>
         public override string HarmonyID => "com.github.algernon-A.csl.eightyone2";
 

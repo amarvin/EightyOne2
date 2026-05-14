@@ -188,7 +188,7 @@ namespace EightyOne2.Patches
                     instruction.operand = ExpandedImmaterialResourceGridMax - 1;
                 }
 
-                // TOOD: may need to have custom code for this, ushort[] buffer needs to be uint[] maybe?
+                // TODO: may need to have custom code for this, ushort[] buffer needs to be uint[] maybe?
                 // NO! (yay!) - BUT need to atch 540/1080 bounds - 540* 16 /38.54 = 225, i.e. half-square - CONFIRMED, bounds is for full map so can leave
                 // BUT, 64f?  Quarter grid? NO - height (y).
                 // Watch 0xFF
@@ -243,7 +243,7 @@ namespace EightyOne2.Patches
         private static IEnumerable<CodeInstruction> CheckResourceTranspiler(IEnumerable<CodeInstruction> instructions, MethodBase original) => ReplaceImmaterialResourceConstants(instructions, original);
 
         /// <summary>
-        /// Pre-emptive Harmony prefix for ImmaterialResourceManager.GetParkAreaResourceIndexes to implement 81 tiles functionality using expanded fields and constants.
+        /// Preemptive Harmony prefix for ImmaterialResourceManager.GetParkAreaResourceIndexes to implement 81 tiles functionality using expanded fields and constants.
         /// </summary>
         /// <param name="__result">Original method result.</param>
         /// <param name="park">Park ID.</param>
@@ -615,7 +615,7 @@ namespace EightyOne2.Patches
         /// </summary>
         /// <param name="item">Queue item.</param>
         /// <param name="park">Park ID.</param>
-        /// <param name="maxCost">Maxmimum cost.</param>
+        /// <param name="maxCost">Maximum cost.</param>
         /// <param name="direction">Direction to process.</param>
         private static void ProcessParkArea(ref ExpandedAreaQueueItem item, byte park, int maxCost, AreaQueueItemDirection direction)
         {

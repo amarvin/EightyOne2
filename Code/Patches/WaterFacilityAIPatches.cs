@@ -22,10 +22,10 @@ namespace EightyOne2.Patches
         internal static bool IgnoreOriginal { get => s_ignoreOriginal; set => s_ignoreOriginal = value; }
 
         /// <summary>
-        /// Harmony prefix patch to WaterManager.ProduceGoodsPrefix to exlude original water buildings from being included in the simulation.
+        /// Harmony prefix patch to WaterManager.ProduceGoodsPrefix to exclude original water buildings from being included in the simulation.
         /// </summary>
         /// <param name="buildingData">Building data.</param>
-        /// <returns>True (execute original method), unless original water facilites are being ignored (false - don't execute original method).</returns>
+        /// <returns>True (execute original method), unless original water facilities are being ignored (false - don't execute original method).</returns>
         [HarmonyPatch("ProduceGoods")]
         [HarmonyPrefix]
         internal static bool ProduceGoodsPrefix(ref Building buildingData)

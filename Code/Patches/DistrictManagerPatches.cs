@@ -233,7 +233,7 @@ namespace EightyOne2.Patches
         {
             Logging.Message("transpiling ", PatcherBase.PrintMethod(original));
 
-            // Custom job due to false postives with the standard replacer from alpha calculations.
+            // Custom job due to false positives with the standard replacer from alpha calculations.
             int replacedCount = 0;
 
             // Look for and update any relevant constants.
@@ -309,7 +309,7 @@ namespace EightyOne2.Patches
         private static IEnumerable<CodeInstruction> MoveParkTreesTranspiler(IEnumerable<CodeInstruction> instructions, MethodBase original) => ReplaceDistrictConstants(instructions, original);
 
         /// <summary>
-        /// Pre-emptive Harmony prefix for DistrictManager.NamesModified to implement 81 tiles functionality using upsized fields and constants.
+        /// Preemptive Harmony prefix for DistrictManager.NamesModified to implement 81 tiles functionality using upsized fields and constants.
         /// </summary>
         /// <param name="__instance">DistrictManager instance.</param>
         /// <param name="___m_namesModified">DistrictManager private field m_namesModified.</param>
@@ -337,7 +337,7 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix for DistrictManager.NamesModified to implement 81 tiles functionality using upsized fields and constants.
+        /// Preemptive Harmony prefix for DistrictManager.NamesModified to implement 81 tiles functionality using upsized fields and constants.
         /// </summary>
         /// <param name="grid">District cell grid.</param>
         /// <returns>Always false (never execute original method).</returns>
@@ -463,7 +463,7 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix for DistrictManager.ParkNamesModified to implement 81 tiles functionality using upsized fields and constants.
+        /// Preemptive Harmony prefix for DistrictManager.ParkNamesModified to implement 81 tiles functionality using upsized fields and constants.
         /// </summary>
         /// <param name="__instance">DistrictManager instance.</param>
         /// <param name="___m_namesModified">DistrictManager private field m_namesModified.</param>

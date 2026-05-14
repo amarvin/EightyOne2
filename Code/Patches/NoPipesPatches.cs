@@ -105,10 +105,10 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.CheckHeating to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.CheckHeating to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="heating">Set to true if heating is available, false otherwise.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(WaterManager.CheckHeating))]
         [HarmonyPrefix]
         private static bool CheckHeatingPrefix(ref bool heating)
@@ -117,7 +117,7 @@ namespace EightyOne2.Patches
             {
                 heating = s_heatingConsumptionPool > 0;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -125,12 +125,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.CheckWater to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.CheckWater to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="water">Set to true if water is available, false otherwise.</param>
         /// <param name="sewage">Set to true if sewage is available, false otherwise.</param>
         /// <param name="waterPollution">Current water pollution level.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(WaterManager.CheckWater))]
         [HarmonyPrefix]
         private static bool CheckWaterPrefix(ref bool water, ref bool sewage, ref byte waterPollution)
@@ -143,7 +143,7 @@ namespace EightyOne2.Patches
                 // Return zero for water pollution if no water.
                 waterPollution = s_waterConsumptionPool > 0 ? s_waterPollution : byte.MinValue;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -151,12 +151,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.TryDumpHeating to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.TryDumpHeating to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="__result">Original method result (sewage removal dumped 'to' grid).</param>
         /// <param name="rate">Water production rate.</param>
         /// <param name="max">Maximum water production rate.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(WaterManager.TryDumpHeating))]
         [HarmonyPrefix]
         private static bool TryDumpHeatingPrefix(ref int __result, int rate, int max)
@@ -166,7 +166,7 @@ namespace EightyOne2.Patches
                 __result = Mathf.Clamp(rate, 0, max);
                 s_heatingProductionPool += __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -174,12 +174,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.TryDumpSewage to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.TryDumpSewage to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="__result">Original method result (sewage dumped to grid).</param>
         /// <param name="rate">Water production rate.</param>
         /// <param name="max">Maximum water production rate.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(
             nameof(WaterManager.TryDumpSewage),
             new Type[] { typeof(Vector3), typeof(int), typeof(int) })]
@@ -191,7 +191,7 @@ namespace EightyOne2.Patches
                 __result = Mathf.Min(Mathf.Min(rate, max), s_sewageConsumptionPool);
                 s_sewageConsumptionPool -= __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -199,12 +199,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.TryDumpSewage to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.TryDumpSewage to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="__result">Original method result (sewage dumped to grid).</param>
         /// <param name="rate">Water production rate.</param>
         /// <param name="max">Maximum water production rate.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(
             nameof(WaterManager.TryDumpSewage),
             new Type[] { typeof(Vector3), typeof(int), typeof(int) })]
@@ -216,7 +216,7 @@ namespace EightyOne2.Patches
                 __result = Mathf.Min(Mathf.Min(rate, max), s_sewageConsumptionPool);
                 s_sewageConsumptionPool -= __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -224,13 +224,13 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.TryDumpWater to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.TryDumpWater to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="__result">Original method result (water dumped to grid).</param>
         /// <param name="rate">Water production rate.</param>
         /// <param name="max">Maximum water production rate.</param>
         /// <param name="waterPollution">Source water pollution level.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(WaterManager.TryDumpWater))]
         [HarmonyPrefix]
         private static bool TryDumpWaterPrefix(ref int __result, int rate, int max, byte waterPollution)
@@ -243,7 +243,7 @@ namespace EightyOne2.Patches
                 // TODO: implement pollution scaling.
                 s_waterPollution = waterPollution;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -251,13 +251,13 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.TryFetchHeating to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.TryFetchHeating to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="__result">Original method result (sewage removal 'fetched' from grid).</param>
         /// <param name="rate">Electricity production rate.</param>
         /// <param name="max">Maximum electricity production rate.</param>
-        /// <param name="connected">Whether or not the building is considered connected to the heating network (controlls complaint display).</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <param name="connected">Whether or not the building is considered connected to the heating network (controls complaint display).</param>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(WaterManager.TryFetchHeating))]
         [HarmonyPrefix]
         private static bool TryFetchHeatingPrefix(ref int __result, int rate, int max, ref bool connected)
@@ -270,7 +270,7 @@ namespace EightyOne2.Patches
                 // Assign connected status (true if we have any current heating capacity).
                 connected = Singleton<DistrictManager>.instance.m_districts.m_buffer[0].GetHeatingCapacity() > 0;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -278,12 +278,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.TryFetchSewage to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.TryFetchSewage to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="__result">Original method result (sewage removal 'fetched' from grid).</param>
         /// <param name="rate">Electricity production rate.</param>
         /// <param name="max">Maximum electricity production rate.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(WaterManager.TryFetchSewage))]
         [HarmonyPrefix]
         private static bool TryFetchSewagePrefix(ref int __result, int rate, int max)
@@ -293,7 +293,7 @@ namespace EightyOne2.Patches
                 __result = Mathf.Clamp(rate, 0, max);
                 s_sewageProductionPool += __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -301,12 +301,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.TryFetchWater to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.TryFetchWater to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="__result">Original method result (water fetched from grid).</param>
         /// <param name="rate">Electricity production rate.</param>
         /// <param name="max">Maximum electricity production rate.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(
             nameof(WaterManager.TryFetchWater),
             new Type[] { typeof(Vector3), typeof(int), typeof(int), typeof(byte) },
@@ -319,7 +319,7 @@ namespace EightyOne2.Patches
                 __result = Math.Min(Math.Min(rate, max), s_waterConsumptionPool);
                 s_waterConsumptionPool -= __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -327,12 +327,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to WaterManager.TryFetchWater to implement 'no pipes' functionality.
+        /// Preemptive Harmony prefix patch to WaterManager.TryFetchWater to implement 'no pipes' functionality.
         /// </summary>
         /// <param name="__result">Original method result (water fetched from grid).</param>
         /// <param name="rate">Electricity production rate.</param>
         /// <param name="max">Maximum electricity production rate.</param>
-        /// <returns>False (pre-empt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no pipes functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(
             nameof(WaterManager.TryFetchWater),
             new Type[] { typeof(ushort), typeof(int), typeof(int), typeof(byte) },
@@ -345,7 +345,7 @@ namespace EightyOne2.Patches
                 __result = Math.Min(Math.Min(rate, max), s_waterConsumptionPool);
                 s_waterConsumptionPool -= __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 

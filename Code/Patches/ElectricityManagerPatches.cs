@@ -41,12 +41,12 @@ namespace EightyOne2.Patches
         internal const int ExpandedElectricityGridResolution = 462;
 
         /// <summary>
-        /// Game electricty grid half-resolution (128f).
+        /// Game electricity grid half-resolution (128f).
         /// </summary>
         internal const float GameElectricityGridHalfResolution = GameElectricityGridResolution / 2;
 
         /// <summary>
-        /// Expanded electricty grid half-resolution (231f).
+        /// Expanded electricity grid half-resolution (231f).
         /// </summary>
         internal const float ExpandedElectricityGridHalfResolution = ExpandedElectricityGridResolution / 2;
 

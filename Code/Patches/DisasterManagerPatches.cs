@@ -32,7 +32,7 @@ namespace EightyOne2.Patches
         internal const int ExpandedDisasterGridResolution = 450;
 
         /// <summary>
-        /// Game evacuation and hazard mape grid half-resolution = 256 / 2f = 128f.
+        /// Game evacuation and hazard map grid half-resolution = 256 / 2f = 128f.
         /// </summary>
         internal const float GameDisasterGridHalfResolution = GameDisasterGridResolution / 2f;
 
