@@ -178,7 +178,7 @@ namespace EightyOne2.Serialization
         }
 
         /// <summary>
-        /// Repairer for earlier versions of legacy 81 tiles data, where cell alphas weren't properly intialized.
+        /// Repairer for earlier versions of legacy 81 tiles data, where cell alphas weren't properly initialized.
         /// </summary>
         /// <param name="districtCellArray">Cell array to repair.</param>
         private void RepairCells(Cell[] districtCellArray)

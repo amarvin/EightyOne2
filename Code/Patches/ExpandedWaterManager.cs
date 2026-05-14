@@ -11,7 +11,7 @@ namespace EightyOne2.Patches
     using static WaterManagerPatches;
 
     /// <summary>
-    /// Custom electricty manager components for 81-tile operation.
+    /// Custom electricity manager components for 81-tile operation.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1311:Static readonly fields should begin with upper-case letter", Justification = "Dotnet runtime style")]
     internal static class ExpandedWaterManager

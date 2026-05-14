@@ -30,10 +30,10 @@ namespace EightyOne2.Patches
         internal static bool NoPowerlinesEnabled { get => s_noPowerlinesEnabled; set => s_noPowerlinesEnabled = value; }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to ElectricityManager.CheckElectricity to implement 'no powerlines' functionality.
+        /// Preemptive Harmony prefix patch to ElectricityManager.CheckElectricity to implement 'no powerlines' functionality.
         /// </summary>
         /// <param name="electricity">Set to true if electricity is available, false otherwise.</param>
-        /// <returns>False (pre-empt original game method) if no powerlines functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no powerlines functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(ElectricityManager.CheckElectricity))]
         [HarmonyPrefix]
         private static bool CheckElectricityPrefix(ref bool electricity)
@@ -42,7 +42,7 @@ namespace EightyOne2.Patches
             {
                 electricity = s_electricityConsumptionPool > 0;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -50,12 +50,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to ElectricityManager.TryDumpElectricity to implement 'no powerlines' functionality.
+        /// Preemptive Harmony prefix patch to ElectricityManager.TryDumpElectricity to implement 'no powerlines' functionality.
         /// </summary>
         /// <param name="__result">Original method result (electricity dumped to grid).</param>
         /// <param name="rate">Electricity production rate.</param>
         /// <param name="max">Maximum electricity production rate.</param>
-        /// <returns>False (pre-empt original game method) if no powerlines functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no powerlines functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(ElectricityManager.TryDumpElectricity), new Type[] { typeof(Vector3), typeof(int), typeof(int) })]
         [HarmonyPrefix]
         private static bool TryDumpElectricity1Prefix(ref int __result, int rate, int max)
@@ -65,7 +65,7 @@ namespace EightyOne2.Patches
                 __result = Mathf.Clamp(rate, 0, max);
                 s_electricityProductionPool += __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -73,12 +73,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to ElectricityManager.TryDumpElectricity to implement 'no powerlines' functionality.
+        /// Preemptive Harmony prefix patch to ElectricityManager.TryDumpElectricity to implement 'no powerlines' functionality.
         /// </summary>
         /// <param name="__result">Original method result (electricity dumped to grid).</param>
         /// <param name="rate">Electricity production rate.</param>
         /// <param name="max">Maximum electricity production rate.</param>
-        /// <returns>False (pre-empt original game method) if no powerlines functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no powerlines functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(ElectricityManager.TryDumpElectricity), new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) })]
         [HarmonyPrefix]
         private static bool TryDumpElectricity2Prefix(ref int __result, int rate, int max)
@@ -88,7 +88,7 @@ namespace EightyOne2.Patches
                 __result = Mathf.Clamp(rate, 0, max);
                 s_electricityProductionPool += __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 
@@ -96,12 +96,12 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Pre-emptive Harmony prefix patch to ElectricityManager.TryFetchElectricity to implement 'no powerlines' functionality.
+        /// Preemptive Harmony prefix patch to ElectricityManager.TryFetchElectricity to implement 'no powerlines' functionality.
         /// </summary>
         /// <param name="__result">Original method result (electricity fetched from grid).</param>
         /// <param name="rate">Electricity production rate.</param>
         /// <param name="max">Maximum electricity production rate.</param>
-        /// <returns>False (pre-empt original game method) if no powerlines functionality is enabled, true (continue execution) otherwise.</returns>
+        /// <returns>False (preempt original game method) if no powerlines functionality is enabled, true (continue execution) otherwise.</returns>
         [HarmonyPatch(nameof(ElectricityManager.TryFetchElectricity))]
         [HarmonyPrefix]
         private static bool TryFetchElectricityPrefix(ref int __result, int rate, int max)
@@ -111,7 +111,7 @@ namespace EightyOne2.Patches
                 __result = Mathf.Clamp(Math.Min(rate, max), 0, s_electricityConsumptionPool);
                 s_electricityConsumptionPool -= __result;
 
-                // Pre-empt original method.
+                // Preempt original method.
                 return false;
             }
 

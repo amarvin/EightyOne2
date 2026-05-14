@@ -47,7 +47,7 @@ Version 0.9.10 -
 
 Version 0.9.9.1 -
 
-- Fix random disasters not occuring evenly across the 81-tile area
+- Fix random disasters not occurring evenly across the 81-tile area
 
 
 Version 0.9.9 -

@@ -92,7 +92,7 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Performs deserialization activites when loading game data.
+        /// Performs deserialization activities when loading game data.
         /// Converts loaded data into 81 tiles format and ensures correct 81-tile array sizes.
         /// </summary>
         /// <param name="electricityManager">ElectricityManager instance.</param>
@@ -124,7 +124,7 @@ namespace EightyOne2.Patches
             }
 
             // If we got here, we didn't get readable expanded water data.
-            Logging.Message("no expanded electricity data found - coverting vanilla data");
+            Logging.Message("no expanded electricity data found - converting vanilla data");
 
             // New electricity grid for 81 tiles.
             Cell[] newElectricityGrid = new Cell[ExpandedElectricityGridArraySize];
@@ -171,7 +171,7 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Performs serialization activites when saving game data.
+        /// Performs serialization activities when saving game data.
         /// Saves the 25-tile subset of 81-tile data.
         /// </summary>
         /// <param name="electricityGrid">ElectricityManager m_electricityGrid array.</param>

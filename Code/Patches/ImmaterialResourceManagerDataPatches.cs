@@ -108,7 +108,7 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Performs deserialization activites when loading game data.
+        /// Performs deserialization activities when loading game data.
         /// Converts loaded data into 81 tiles format and ensures correct 81-tile array sizes.
         /// </summary>
         /// <param name="m_localFinalResources">ImmaterialResourceManager private array m_localFinalResources.</param>
@@ -142,7 +142,7 @@ namespace EightyOne2.Patches
         }
 
         /// <summary>
-        /// Performs deserialization activites when loading game data.
+        /// Performs deserialization activities when loading game data.
         /// Saves the 25-tile subset of 81-tile data.
         /// </summary>
         /// <param name="encodedArray">Encoded array to write to.</param>
