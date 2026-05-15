@@ -32,7 +32,7 @@ Enables water/sewage/heating service without pipes (as with electricity, you sti
 
 Roads will now also act as powerlines. You can have this activated at the same time as 'no need for powerlines' if you want (there just isn't much point).
 
-Klyte's [Electric Roads 3](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=1689984220) mod is compatible with this mod. It'll override this mod's electric roads function and provides additional features (such as selecting which roads are affected).
+Klyte's [Electric Roads 3](https://steamcommunity.com/sharedfiles/filedetails/?id=1689984220) mod is compatible with this mod. It'll override this mod's electric roads function and provides additional features (such as selecting which roads are affected).
 
 ## Build outside of owned tiles
 
@@ -53,7 +53,7 @@ Like the 'Cross the Line' mod, this option does what it says, and can be toggled
 >
 > # DO NOT SECOND-LOAD USING THIS OR ANY OTHER MOD. ALWAYS EXIT TO DESKTOP BETWEEN LOADS.
 >
-> This mod will intentionally disable the 'load game' and 'return to main menu' buttons when in-game to protect your save from second-loading. Second-loading with mods (not just this one!) can corrupt your save. See [the basic guide to using mods](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=1411897315).
+> This mod will intentionally disable the 'load game' and 'return to main menu' buttons when in-game to protect your save from second-loading. Second-loading with mods (not just this one!) can corrupt your save. See [the basic guide to using mods](https://steamcommunity.com/sharedfiles/filedetails/?id=1411897315).
 
 <hr>
 
@@ -61,9 +61,9 @@ Like the 'Cross the Line' mod, this option does what it says, and can be toggled
 
 A lot of older unmaintained mods are now broken, and don't work well with modern mods like this one - obviously, that's not this mod's fault. Make sure you **CHECK YOUR MODS AND REMOVE OUTDATED/BROKEN ONES** before reporting any potential issues with this mod - a good guide is to unsubscribe from all mods not updated since 2021.
 
-If you're having problems with only this mod, Harmony, and Loading Screen Mod enabled, then post your [output log](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=463645931) here for help.
+If you're having problems with only this mod, Harmony, and Loading Screen Mod enabled, then post your [output log](https://steamcommunity.com/sharedfiles/filedetails/?id=463645931) here for help.
 
-Comments just saying "it's broken" (or similar) with no other information or evidence will be deleted, because they add no value and just waste space. If you're having issues, clearly define what the issue is and provide a copy of your [output log](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=463645931).
+Comments just saying "it's broken" (or similar) with no other information or evidence will be deleted, because they add no value and just waste space. If you're having issues, clearly define what the issue is and provide a copy of your [output log](https://steamcommunity.com/sharedfiles/filedetails/?id=463645931).
 
 <hr>
 
@@ -71,22 +71,22 @@ Comments just saying "it's broken" (or similar) with no other information or evi
 
 Any other 81 Tiles or 25 tiles mods (obviously), including the obsolete EML.
 
-- [81 Tiles](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=576327847)
-- [Purchase it!](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=1612287735)
-- [All 25 Areas purchasable](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=405810376)
-- [BigCity (25 tiles mod)](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=1270675750)
-- [Extended Managers Library Beta](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=2607980391)
-- [Remove Need For Power Lines](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=572888650)
-- [Remove Need For Pipes](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=576997275)
-- [Cross the Line](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=498386331)
+- [81 Tiles](https://steamcommunity.com/sharedfiles/filedetails/?id=576327847)
+- [Purchase it!](https://steamcommunity.com/sharedfiles/filedetails/?id=1612287735)
+- [All 25 Areas purchasable](https://steamcommunity.com/sharedfiles/filedetails/?id=405810376)
+- [BigCity (25 tiles mod)](https://steamcommunity.com/sharedfiles/filedetails/?id=1270675750)
+- [Extended Managers Library Beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2607980391)
+- [Remove Need For Power Lines](https://steamcommunity.com/sharedfiles/filedetails/?id=572888650)
+- [Remove Need For Pipes](https://steamcommunity.com/sharedfiles/filedetails/?id=576997275)
+- [Cross the Line](https://steamcommunity.com/sharedfiles/filedetails/?id=498386331)
 
 **All functions of these mods are included in this mod!**
 
 This mod has been developed and tested against virtually all of the **currently-maintained mods** with no conflicts discovered.
 
-**Building Anarchy** is subtly incompatible and can break saves over time; use [Building Control](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=2996538702) as a modern replacement.
+**Building Anarchy** is subtly incompatible and can break saves over time; use [Building Control](https://steamcommunity.com/sharedfiles/filedetails/?id=2996538702) as a modern replacement.
 
-**Font Selector** also causes errors when used with this mod; use [Font Changer](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=2981354344) instead.
+**Font Selector** also causes errors when used with this mod; use [Font Changer](https://steamcommunity.com/sharedfiles/filedetails/?id=2981354344) instead.
 
 <hr>
 
@@ -114,24 +114,24 @@ Can be safely removed at any time (you'll just lose all the districts/areas and 
 
 Special thanks to Mbyron26 for the great logo!
 
-This mod uses [Harmony](steam://openurl_external/https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fgithub.com%2Fpardeike%2FHarmony) version 2.2 by Andreas Pardeike via the [Cities Harmony](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=2040656402) mod by boformer.
+This mod uses [Harmony](https://github.com/pardeike/Harmony) version 2.2 by Andreas Pardeike via the [Cities Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2040656402) mod by boformer.
 
 <hr>
 
 # Source code
 
-[GitHub](steam://openurl_external/https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fgithub.com%2Falgernon-A%2FEightyOne2).
+[GitHub](https://github.com/algernon-A/EightyOne2).
 
 <hr>
 
 # Translations
 
-[Localization at crowdin](steam://openurl_external/https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fcrowdin.com%2Fproject%2F81-tiles-2)
+[Localization at crowdin](https://crowdin.com/project/81-tiles-2)
 
 Please leave a message below if you'd like me to add another language on CrowdIn.
 
 > [!IMPORTANT]
-> [Support at Discord](steam://openurl_external/https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fdiscord.gg%2FWEyYtxb88K)
+> [Support at Discord](https://discord.com/invite/WEyYtxb88K)
 >
 > **VERY IMPORTANT**: any error or bug reports or questions **MUST** be accompanied by an **output log**. Seriously, we really mean it. We can't diagnose and fix issues from comments alone (including any copy-pasted error messages - we really do need the full log).
 >
@@ -139,6 +139,6 @@ Please leave a message below if you'd like me to add another language on CrowdIn
 
 <hr>
 
-[Support me on Ko-fi](steam://openurl_external/https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fko-fi.com%2Falgernon)
+[Support me on Ko-fi](https://ko-fi.com/algernon)
 
-[or Donate via PayPal](steam://openurl_external/https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fpaypal.me%2FalgernonCities)
+[or Donate via PayPal](https://www.paypal.com/paypalme/algernonCities)
