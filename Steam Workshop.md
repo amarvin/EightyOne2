@@ -14,7 +14,7 @@ The mod does **NOT** change any unlocking progression **UNLESS YOU TELL IT TO**.
 
 The mod includes an option (in the options panel) to ignore the game's area unlocking progression, enabling you to unlock as many tiles as you wish. Or just use the game's inbuilt "unlock all" function.
 
-**There's also buttons in the options panel to instantly unlock either the inner 25 or all 81 tiles.**
+**There are also buttons in the options panel to instantly unlock either the inner 25 or all 81 tiles.**
 
 # Additional features
 
@@ -26,7 +26,7 @@ Enables electricity transmission without powerlines (you still need to produce t
 
 ## No need for pipes
 
-Enalbes water/sewage/heating service without pipes (as with electricity, you still need to have the supply/treatment capacity). You don't need to attach pipe segments to any water buildings to stop them complaining.
+Enables water/sewage/heating service without pipes (as with electricity, you still need to have the supply/treatment capacity). You don't need to attach pipe segments to any water buildings to stop them complaining.
 
 ## Electric roads
 
@@ -63,13 +63,13 @@ A lot of older unmaintained mods are now broken, and don't work well with modern
 
 If you're having problems with only this mod, Harmony, and Loading Screen Mod enabled, then post your [output log](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=463645931) here for help.
 
-Comments just saying 'it's broken" (or similar) with no other information or evidence will be deleted, because they add no value and just waste space. If you're having issues, clearly define what the issue is and provide a copy of your [output log](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=463645931).
+Comments just saying "it's broken" (or similar) with no other information or evidence will be deleted, because they add no value and just waste space. If you're having issues, clearly define what the issue is and provide a copy of your [output log](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=463645931).
 
 <hr>
 
 # Conflicting mods
 
-Any other 81 Tiles or 25 tiles mods (obviously), inlcuding the obsolete EML.
+Any other 81 Tiles or 25 tiles mods (obviously), including the obsolete EML.
 
 - [81 Tiles](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=576327847)
 - [Purchase it!](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=1612287735)
